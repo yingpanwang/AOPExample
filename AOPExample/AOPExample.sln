@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOPExample", "AOPExample\AOPExample.csproj", "{54B6EBB1-4713-423F-A986-91F35CB4D6A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{1EECBA12-87F0-428F-8CA5-0D9F8B477EAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54B6EBB1-4713-423F-A986-91F35CB4D6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B6EBB1-4713-423F-A986-91F35CB4D6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B6EBB1-4713-423F-A986-91F35CB4D6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B6EBB1-4713-423F-A986-91F35CB4D6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EECBA12-87F0-428F-8CA5-0D9F8B477EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EECBA12-87F0-428F-8CA5-0D9F8B477EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EECBA12-87F0-428F-8CA5-0D9F8B477EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EECBA12-87F0-428F-8CA5-0D9F8B477EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21B9090E-9CB3-4087-AB29-88BEFF65B17A}
+	EndGlobalSection
+EndGlobal
