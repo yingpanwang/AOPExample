@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
 
 namespace Api
 {
@@ -31,9 +32,10 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            var builder = new ContainerBuilder();
-            builder.Populate(services);
-            var container = builder.Build();
+            
+            //var builder = new ContainerBuilder();
+            //builder.Populate(services);
+            //var container = builder.Build();
             //return new AutofacServiceProvider(container);
         }
 
@@ -41,12 +43,35 @@ namespace Api
         {
             builder.RegisterModule(new DIModal());
             builder.RegisterType<UserService>()
-                .AsImplementedInterfaces().InterceptedBy(typeof(MyInterceptor)).EnableInterfaceInterceptors();
+                .AsImplementedInterfaces()
+                .InterceptedBy(typeof(MyInterceptor))
+                .EnableInterfaceInterceptors();
+
+            builder
+                .RegisterInstance(new MySqlConnection("server=localhost;uid=root;pwd=root;database=test"))
+                .AsImplementedInterfaces()
+                .InterceptedBy(typeof(MyDbConnInterceptor))
+                .EnableInterfaceInterceptors();
+
+            builder.RegisterType(typeof(MySqlCommand))
+                .AsImplementedInterfaces()
+                .InterceptedBy(typeof(MyDbConnInterceptor))
+                .EnableInterfaceInterceptors();
+
+            builder.RegisterType(typeof(MySqlDataReader))
+                .AsImplementedInterfaces()
+                .InterceptedBy(typeof(MyDbConnInterceptor))
+                .EnableInterfaceInterceptors();
+            //builder.RegisterType<MySqlConnection>()
+            //    .AsImplementedInterfaces()
+            //    .InterceptedBy(typeof(MyDbConnInterceptor))
+            //    .EnableInterfaceInterceptors();
             //在控制器中使用依赖注入
             builder.RegisterType<MyInterceptor>();
-            builder.RegisterAssemblyTypes(typeof(Program).Assembly)
-                .Where(t => typeof(ControllerBase).IsAssignableFrom(t) && t != typeof(ControllerBase))
-                .PropertiesAutowired();
+            builder.RegisterType<MyDbConnInterceptor>();
+            //builder.RegisterAssemblyTypes(typeof(Program).Assembly)
+            //    .Where(t => typeof(ControllerBase).IsAssignableFrom(t) && t != typeof(ControllerBase))
+            //    .PropertiesAutowired();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

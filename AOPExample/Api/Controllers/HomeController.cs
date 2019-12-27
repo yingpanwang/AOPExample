@@ -19,7 +19,7 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        public string Get() 
+        public string Get()
         {
             return _userService.GetUser().Name;
         }

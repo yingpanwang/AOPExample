@@ -28,7 +28,6 @@ namespace Api.Interceptor
                    .GetCustomAttributes(typeof(MyInterceptAttribute), true).FirstOrDefault()
                    as MyInterceptAttribute;
             }
-
             if (attr != null)
             {
                 Console.WriteLine("操作开始了");

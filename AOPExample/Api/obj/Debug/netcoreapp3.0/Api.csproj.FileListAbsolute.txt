@@ -111,4 +111,11 @@ D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\runtimes\win\lib\net
 D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\Castle.Core.dll
 D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\Autofac.Extras.DynamicProxy.dll
+D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\BouncyCastle.Crypto.dll
+D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\Google.Protobuf.dll
+D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\MySql.Data.dll
+D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\Renci.SshNet.dll
+D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\SshNet.Security.Cryptography.dll
+D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\System.Resources.Extensions.dll
+D:\个人\AOPExample\AOPExample\Api\bin\Debug\netcoreapp3.0\System.Xml.XPath.XmlDocument.dll
 D:\个人\AOPExample\AOPExample\Api\obj\Debug\netcoreapp3.0\Api.MvcApplicationPartsAssemblyInfo.cache
